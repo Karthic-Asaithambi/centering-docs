@@ -1,14 +1,166 @@
-<h1>Privacy Policy</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Centering Rentals</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; max-width: 680px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; }
+    h1 { font-size: 22px; }
+    h2 { font-size: 17px; margin-top: 28px; }
+    code { background: #f4f4f5; padding: 2px 5px; border-radius: 4px; }
+    ul { padding-left: 20px; }
+    .meta { color: #555; font-size: 14px; }
+    footer { margin-top: 40px; font-size: 12px; color: #777; }
+    a { color: #1a56db; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy &mdash; Centering Rentals</h1>
+  <p class="meta"><strong>App:</strong> Centering Rentals (JK Centering),
+  package <code>com.devfoundryworks.centering</code> &middot;
+  <strong>Developer:</strong> DevFoundryWorks<br />
+  <strong>Last updated:</strong> 10 July 2026</p>
 
-<p>Last Updated: July 2026</p>
+  <p>This policy describes how the Centering Rentals app collects, uses, and
+  protects information. It is based on what the app actually does, verified
+  against its source code.</p>
 
-<h2>Information We Collect</h2>
+  <h2>1. Information We Collect</h2>
+  <p>Centering Rentals is a business-management app for equipment-rental
+  companies. To provide its functionality, the app collects and stores:</p>
+  <ul>
+    <li><strong>Account information:</strong> the email address or phone number
+      you use to sign in (via Supabase Authentication), and, if you choose
+      Google Sign-In, the basic profile information Google provides for that
+      sign-in method.</li>
+    <li><strong>Business data you enter</strong>, including: customer
+      (&ldquo;party&rdquo;) records (name, phone number(s), address, and
+      optionally a profile photo you select); company and branch details
+      (company name, address, GSTIN tax identifier, company code); vendor and
+      site records (name, phone, address); inventory records (item names,
+      quantities, specifications); rental, payment, quotation, and agreement
+      records (amounts, dates, payment methods, business terms); and staff/user
+      role assignments within your company (for role-based access control).</li>
+    <li><strong>Device contacts (optional, user-initiated only):</strong> if you
+      use the &ldquo;import from contacts&rdquo; option when adding a customer,
+      the app reads the single contact you select to prefill that customer's
+      name and phone number. The app does not read, upload, or scan your full
+      contact list &mdash; only the specific contact you choose, when you choose
+      it.</li>
+    <li><strong>Diagnostic information you choose to share:</strong> the app
+      keeps a local crash/error log on your device. If you use the &ldquo;Share
+      Diagnostic Logs&rdquo; feature, that log is shared via your device's own
+      share sheet at your explicit action &mdash; it is not automatically
+      transmitted anywhere.</li>
+  </ul>
+  <p><strong>What we do not collect:</strong> the app does not access your
+  device's camera, does not access your precise or approximate location, and
+  does not request broad file/storage access (photo selection uses your device's
+  standard file picker, which grants access only to the file you pick).</p>
 
-...
+  <h2>2. Authentication</h2>
+  <p>Sign-in is handled by Supabase Authentication (email/phone + password, or
+  Google Sign-In via Android's Credential Manager). Your session is stored
+  encrypted on your device (Android's <code>EncryptedSharedPreferences</code>,
+  backed by the Android Keystore) and is never stored in plain text.</p>
 
-<h2>Contact</h2>
+  <h2>3. Data Storage</h2>
+  <ul>
+    <li>Your business data is stored on our backend, hosted on Supabase (a
+      third-party infrastructure provider that acts as our service provider, not
+      a separate recipient of your data for its own purposes).</li>
+    <li>The app also keeps a local cache of your company's data on your device
+      (Android's Room database) so it continues to work offline, syncing back to
+      our backend once you reconnect.</li>
+    <li>All network traffic between the app and our backend is encrypted
+      (HTTPS/TLS); the app is configured to refuse any unencrypted connection.</li>
+    <li>Android's automatic device backup is disabled for this app, so app data
+      is not included in phone-level cloud backups.</li>
+  </ul>
 
-<p>
-Email:
-devfoundryworks@gmail.com
-</p>
+  <h2>4. Data Sharing</h2>
+  <p>We do not sell your data. We do not share your data with advertising
+  networks &mdash; this app does not display ads and does not integrate any
+  advertising SDK. Your business data is only accessible to:</p>
+  <ul>
+    <li>Your own company's authorized staff, according to the roles and
+      permissions your company administrator assigns within the app.</li>
+    <li>DevFoundryWorks, as the operator of the backend infrastructure the app
+      depends on, solely to provide and maintain the service.</li>
+  </ul>
+  <p><strong>Analytics and crash reporting:</strong> the app includes Firebase
+  Analytics and Firebase Crashlytics libraries, but in this release they are
+  <strong>inactive</strong> &mdash; no analytics events or crash reports are
+  transmitted to any third party, because the Firebase project configuration
+  required to activate them has not been set up. If this changes in a future
+  release, this policy and the Play Console Data Safety disclosures will be
+  updated first, before any such collection begins.</p>
+
+  <h2>5. Security</h2>
+  <ul>
+    <li>All data in transit is encrypted (TLS/HTTPS only).</li>
+    <li>Your authentication session is stored encrypted at rest on your device.</li>
+    <li>The app's login screen blocks screenshots and screen recording on
+      release builds, to reduce credential-exposure risk.</li>
+    <li>Access to your company's data is restricted to authenticated users with
+      an appropriate role, enforced on our backend (not just in the app).</li>
+  </ul>
+  <p>No method of transmission or storage is 100% secure, and we cannot guarantee
+  absolute security, but we take reasonable, verifiable steps consistent with the
+  above.</p>
+
+  <h2>6. Your Responsibilities</h2>
+  <ul>
+    <li>Keep your login credentials confidential; you are responsible for
+      activity on your account.</li>
+    <li>Only enter contact details for individuals you have a legitimate business
+      relationship with (e.g., your actual customers and vendors) &mdash; this
+      app is a business tool, not a general-purpose contact or marketing
+      database.</li>
+    <li>If you are a company administrator, you are responsible for assigning
+      appropriate roles/permissions to your staff and for ensuring your staff's
+      use of the app complies with applicable data-protection laws for your own
+      customers' information.</li>
+  </ul>
+
+  <h2>7. Account &amp; Data Deletion</h2>
+  <p>You can request deletion of your Centering Rentals account and associated
+  personal data at any time:</p>
+  <ul>
+    <li><strong>In the app:</strong> Settings &rarr; Account &rarr; Request
+      account deletion.</li>
+    <li><strong>By email:</strong> email
+      <a href="mailto:devfoundryworks@gmail.com?subject=Account%20deletion%20request">devfoundryworks@gmail.com</a>
+      from the email address associated with your account.</li>
+    <li><strong>Web page:</strong> see our
+      <a href="https://karthic-asaithambi.github.io/centering-docs/account-deletion.html">Account Deletion</a>
+      page for full instructions (usable without the app installed).</li>
+  </ul>
+  <p>Deleting your personal account removes your login identity and profile and
+  revokes your access to company workspaces. Business records owned by a company
+  (customers, rentals, payments, invoices, etc.) remain that company's data;
+  deleting your personal account does not delete a company's business data.
+  Company owners can request removal of an entire company workspace via a
+  separate, controlled in-app workflow. Requests are typically processed within
+  30 days of verification.</p>
+
+  <h2>8. Contact</h2>
+  <ul>
+    <li><strong>Email:</strong>
+      <a href="mailto:devfoundryworks@gmail.com">devfoundryworks@gmail.com</a></li>
+    <li><strong>Developer:</strong> DevFoundryWorks</li>
+  </ul>
+
+  <h2>9. Future Updates</h2>
+  <p>We may update this policy as the app evolves &mdash; for example, if we
+  activate Firebase Analytics/Crashlytics, add features that collect additional
+  data, or change how data is stored or shared. We will revise the
+  &ldquo;Last updated&rdquo; date above whenever this happens, and material
+  changes will be reflected in the app's Play Store listing and Data Safety
+  disclosures before they take effect.</p>
+
+  <footer>Centering Rentals &middot; DevFoundryWorks &middot;
+  Contact: <a href="mailto:devfoundryworks@gmail.com">devfoundryworks@gmail.com</a></footer>
+</body>
+</html>
